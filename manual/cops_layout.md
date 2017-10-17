@@ -2072,6 +2072,15 @@ Enabled | Yes
 
 Checks for comma (,) preceded by space.
 
+### Example
+
+```ruby
+#good
+each { |s, t| a(1, formats[0, 1])}
+#bad
+each { |s , t| a(1 , formats[0 , 1])}
+```
+
 ## Layout/SpaceBeforeComment
 
 Enabled by default | Supports autocorrection
